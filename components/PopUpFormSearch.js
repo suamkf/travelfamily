@@ -6,13 +6,13 @@ const PopUpFormSearch = ({ placeHolder }) => {
       <form method="post" target="_blank">
         <input
           type="search"
-          list="listamodelos"
-          className="input-search-form"
+          list="list-places"
+          className="input-search-form2"
           placeholder={placeHolder}
         />
       </form>
 
-      <datalist id="listamodelos">
+      <datalist id="list-places">
         <option value="Camaro" />
 
         <option value="Corvette" />

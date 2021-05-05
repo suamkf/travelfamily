@@ -25,14 +25,14 @@
 }
 @media screen and (min-width: 900px) {
   .container {
-    margin-top: 7rem;
+    margin-top: 5rem;
   }
 }
 
 .search-form {
   background-color: #04aa6d;
   border: 1px solid black;
-  height: 13rem;
+  height: 13.5rem;
   border-radius: 0.6rem;
 }
 
@@ -50,15 +50,23 @@
 .search-info {
   width: 100%;
   text-align: center;
+  min-width: 210px;
 }
 
 .seacrh-info-title {
   color: white;
-
-  font-size: 2rem;
+  font-size: 1.3rem;
   margin-bottom: 2px;
+}
+
+@media screen and (min-width: 280) {
+  .seacrh-info-title {
+    font-size: 1.7rem;
+  }
 }
 
 .search-info-description {
   color: white;
+  min-width: 210px;
+  font-size: 1.3;
 }

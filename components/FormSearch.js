@@ -1,4 +1,5 @@
 import React from 'react';
+import TextField from '@material-ui/core/TextField';
 
 import './style.css';
 import PopUpFormSearch from './PopUpFormSearch';
@@ -13,18 +14,30 @@ const FormSearch = () => {
         <PopUpFormSearch placeHolder={'To'} />
       </div>
       <div className="item-search-form">
-        <input
-          className="input-search-form"
-          type="text"
-          placeholder="Departure"
-        ></input>
+        <form className="input-search-form" noValidate>
+          <TextField
+            id="date"
+            type="date"
+            defaultValue={''}
+            className="input-search-form"
+            InputLabelProps={{
+              shrink: true,
+            }}
+          />
+        </form>
       </div>
       <div className="item-search-form">
-        <input
-          className="input-search-form"
-          type="text"
-          placeholder="Family size"
-        ></input>
+        <form className="input-search-form" noValidate>
+          <TextField
+            id="date"
+            type="date"
+            defaultValue={''}
+            className="input-search-form"
+            InputLabelProps={{
+              shrink: true,
+            }}
+          />
+        </form>
       </div>
     </div>
   );
