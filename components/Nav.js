@@ -15,7 +15,6 @@ const Nav = () => {
       <Link to="#home" className="active">
         Home
       </Link>
-      <Link to="/">News</Link>
       <Link to="/">Contact</Link>
       <Link to="/">About</Link>
       <Link className="icon" onClick={myFunction}>
