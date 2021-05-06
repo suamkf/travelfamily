@@ -1,13 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const OfferItem = ({ info }) => {
+const OfferItem = ({ info, style_class }) => {
   return (
-    <div className="offer-item-container">
+    <div className={style_class}>
       <Link to={info.url}>
         <img className="offer-item-image" src={info.image} />
-
-        <div className="offer-item-descrition">{info.description}</div>
       </Link>
     </div>
   );

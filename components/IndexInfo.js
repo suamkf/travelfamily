@@ -28,10 +28,24 @@ const IndexInfo = () => {
         </b>
       </div>
       <div className="index-info-offer">
-        <OfferItem info={info} />
-        <OfferItem info={info} />
-        <OfferItem info={info} />
-        <OfferItem info={info} />
+        <OfferItem
+          info={info}
+          style_class={'offer-item-container offer-item-container2'}
+        />
+        <OfferItem
+          info={info}
+          style_class={'offer-item-container offer-item-container2'}
+        />
+        <OfferItem
+          info={info}
+          style_class={'offer-item-container offer-item-container2'}
+        />
+        <OfferItem
+          info={info}
+          style_class={'offer-item-container offer-item-container2'}
+        />
+        <OfferItem info={info} style_class={'offer-item-container'} />
+        <OfferItem info={info} style_class={'offer-item-container'} />
       </div>
     </div>
   );

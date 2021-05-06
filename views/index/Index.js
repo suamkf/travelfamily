@@ -3,6 +3,7 @@ import React from 'react';
 import './style.css';
 import Search from '../../components/Search';
 import IndexInfo from '../../components/IndexInfo';
+import Footer from '../../components/Footer';
 
 const Index = () => {
   return (
@@ -10,6 +11,7 @@ const Index = () => {
     <>
       <Search />
       <IndexInfo />
+      <Footer />
     </>
   );
 };

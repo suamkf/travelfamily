@@ -39,6 +39,9 @@ const FormSearch = () => {
           />
         </form>
       </div>
+      <div className="search-button-form">
+        <button className="search-button">Buscar</button>
+      </div>
     </div>
   );
 };
