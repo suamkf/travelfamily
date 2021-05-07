@@ -14,7 +14,6 @@ function App() {
       <div className="Main">
         <Nav />
         <Search />
-
         <div className="index-info-container">
           <ChoosePath />
         </div>

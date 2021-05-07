@@ -43,7 +43,7 @@ const info = [
 
 const IndexInfo = () => {
   return (
-    <div className="index-info-container">
+    <>
       <div className="index-info-description">
         <p className="index-info-description-title">
           BEST EXPERIENCE AND PRICE
@@ -86,7 +86,7 @@ const IndexInfo = () => {
           big_height={true}
         />
       </div>
-    </div>
+    </>
   );
 };
 
