@@ -2,14 +2,18 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import './App.css';
 import Nav from './components/Nav';
-import Index from './views/index/Index';
+import Search from './components/Search';
+import IndexInfo from './components/IndexInfo';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <Router>
       <div className="Main">
         <Nav />
-        <Index />
+        <Search />
+        <IndexInfo />
+        <Footer />
       </div>
     </Router>
   );

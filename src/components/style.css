@@ -208,10 +208,6 @@
   box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
     0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
-.offer-item-container:hover {
-  box-shadow: inset 0 0em 0em rgba(0, 0, 0, 0.1), 0 0 0 0px rgb(255, 255, 255),
-    0.4em 0.4em 0.4em rgba(0, 0, 0, 0.801);
-}
 
 @media screen and (min-width: 600px) {
   .offer-item-container {
@@ -236,11 +232,38 @@
 
 .offer-item-image {
   width: 100%;
-  background-image: 100% 100%;
-  text-decoration: none;
+  height: 150px;
+  background-size: 100% 100%;
+
   border-radius: 3px;
 }
+.biggest-hight {
+  height: 200px;
+}
 
+@media screen and (min-width: 600px) {
+  .offer-item-image {
+    height: 140px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .offer-item-image {
+    height: 120px;
+  }
+  .biggest-hight {
+    height: 220px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .offer-item-image {
+    height: 140px;
+  }
+  .biggest-hight {
+    height: 240px;
+  }
+}
 .offer-item-descrition {
   position: absolute;
   background-color: green;
@@ -254,6 +277,34 @@ a:active {
   text-decoration: none;
 }
 
+.offer-iten-text-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+}
+
+.offer-item-text-subcontainer {
+  margin: 0px auto;
+  height: 1.5rem;
+  text-align: left;
+  width: 90%;
+  border-radius: 0.5rem;
+  grid-row: 10;
+}
+.offer-iten-text-container p {
+  padding: 0px;
+  margin: 0px auto;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.offer-item-text-separaton {
+  width: 60%;
+  height: 1px;
+  background-color: #ffffff;
+  margin: 0xp auto;
+  grid-row: 11;
+}
 .footer-containe {
   width: 100px;
   height: auto;

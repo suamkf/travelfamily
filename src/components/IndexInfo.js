@@ -2,13 +2,44 @@ import React from 'react';
 
 import OfferItem from './OfferItem';
 
-const info = {
-  url: '',
-  image:
-    'http://mariacarolinamirabal.com/wp-content/uploads/2020/05/plaza-espana-sevilla_20333351_20200107162131.jpg',
-  description:
-    'Madrid, Barcelona • 9 days Start your Eastern Europe trip from Berlin – one of the most attractive European cities. Head out to Warsaw – the capital of Poland, where you’ll be able to take a guided tour through the city’s places of interests and museums.',
-};
+const info = [
+  {
+    id: 1,
+    url: '',
+    image:
+      'http://mariacarolinamirabal.com/wp-content/uploads/2020/05/plaza-espana-sevilla_20333351_20200107162131.jpg',
+  },
+  {
+    id: 2,
+    url: '',
+    image:
+      'https://cypes.grupoeurohispana.com/img/articulos_facebook/ALEMANIA.jpg',
+  },
+  {
+    id: 3,
+    url: '',
+    image:
+      'http://mariacarolinamirabal.com/wp-content/uploads/2020/05/plaza-espana-sevilla_20333351_20200107162131.jpg',
+  },
+  {
+    id: 4,
+    url: '',
+    image:
+      'https://cypes.grupoeurohispana.com/img/articulos_facebook/ALEMANIA.jpg',
+  },
+  {
+    id: 5,
+    url: '',
+    image:
+      'http://mariacarolinamirabal.com/wp-content/uploads/2020/05/plaza-espana-sevilla_20333351_20200107162131.jpg',
+  },
+  {
+    id: 6,
+    url: '',
+    image:
+      'https://cypes.grupoeurohispana.com/img/articulos_facebook/ALEMANIA.jpg',
+  },
+];
 
 const IndexInfo = () => {
   return (
@@ -29,23 +60,31 @@ const IndexInfo = () => {
       </div>
       <div className="index-info-offer">
         <OfferItem
-          info={info}
+          info={info[0]}
           style_class={'offer-item-container offer-item-container2'}
         />
         <OfferItem
-          info={info}
+          info={info[1]}
           style_class={'offer-item-container offer-item-container2'}
         />
         <OfferItem
-          info={info}
+          info={info[2]}
           style_class={'offer-item-container offer-item-container2'}
         />
         <OfferItem
-          info={info}
+          info={info[3]}
           style_class={'offer-item-container offer-item-container2'}
         />
-        <OfferItem info={info} style_class={'offer-item-container'} />
-        <OfferItem info={info} style_class={'offer-item-container'} />
+        <OfferItem
+          info={info[4]}
+          style_class={'offer-item-container'}
+          big_height={true}
+        />
+        <OfferItem
+          info={info[5]}
+          style_class={'offer-item-container'}
+          big_height={true}
+        />
       </div>
     </div>
   );
