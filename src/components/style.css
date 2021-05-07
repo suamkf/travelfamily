@@ -145,25 +145,6 @@
   font-size: 1.3;
 }
 
-.index-info-container {
-  background-color: #04aa6d0a;
-  width: 100%;
-  height: auto;
-  padding-top: 7.3rem;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-@media screen and (min-width: 400px) {
-  .index-info-container {
-    padding-top: 4.5rem;
-  }
-}
-@media screen and (min-width: 600px) {
-  .index-info-container {
-    padding-top: 2.5rem;
-  }
-}
 .index-info-description {
   width: 100%;
   text-align: center;

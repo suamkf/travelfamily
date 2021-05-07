@@ -62,3 +62,23 @@
     text-align: left;
   }
 }
+
+.index-info-container {
+  background-color: #04aa6d0a;
+  width: 100%;
+  height: auto;
+  padding-top: 4rem;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+@media screen and (min-width: 400px) {
+  .index-info-container {
+    padding-top: 2.5rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .index-info-container {
+    padding-top: 0.5rem;
+  }
+}

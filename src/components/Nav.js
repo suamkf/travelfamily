@@ -12,7 +12,7 @@ const Nav = () => {
   }
   return (
     <div className="topnav" id="myTopnav">
-      <Link to="#home" className="active">
+      <Link to="/" className="active">
         Home
       </Link>
       <Link to="/">Contact</Link>

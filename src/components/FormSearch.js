@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import TextField from '@material-ui/core/TextField';
 
 import './style.css';
@@ -40,7 +41,9 @@ const FormSearch = () => {
         </form>
       </div>
       <div className="search-button-form">
-        <button className="search-button">Buscar</button>
+        <Link to="/searh/:query">
+          <button className="search-button">Buscar</button>
+        </Link>
       </div>
     </div>
   );
