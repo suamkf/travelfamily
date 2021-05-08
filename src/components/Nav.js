@@ -15,8 +15,7 @@ const Nav = () => {
       <Link to="/" className="active">
         Home
       </Link>
-      <Link to="/">Contact</Link>
-      <Link to="/">About</Link>
+      <Link to="/about">About</Link>
       <Link className="icon" onClick={myFunction}>
         <i className="fa fa-bars"></i>
       </Link>

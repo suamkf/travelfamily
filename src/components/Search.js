@@ -2,7 +2,7 @@ import React from 'react';
 
 import FormSearch from './FormSearch';
 
-const Search = () => {
+const Search = ({ posiblePlaces, changeList }) => {
   return (
     /* Background Image */
     <div className="search-bg-img">
@@ -15,7 +15,7 @@ const Search = () => {
           </p>
         </div>
         <div className="search-form">
-          <FormSearch />
+          <FormSearch posiblePlaces={posiblePlaces} changeList={changeList} />
         </div>
       </div>
     </div>

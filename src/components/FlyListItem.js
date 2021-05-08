@@ -5,11 +5,33 @@ const FlyListItem = () => {
     <div className="fly-list-item-container">
       <div className="fly-list-item-dep-des-container">
         <div className="fly-list-item-departure-destination none-top-border">
-          <div className="fly-list-item-icon"></div>
+          <div className="fly-list-item">
+            <div className="fly-list-item-icon"></div>
+            <div className="fly-list-item-descriptio"></div>
+          </div>
+          <div className="fly-list-item">
+            <div className="fly-list-item-icon"></div>
+            <div className="fly-list-item-descriptio"></div>
+          </div>
+          <div className="fly-list-item">
+            <div className="fly-list-item-icon"></div>
+            <div className="fly-list-item-descriptio"></div>
+          </div>
         </div>
 
         <div className="fly-list-item-departure-destination">
-          <div className="fly-list-item-icon"></div>
+          <div className="fly-list-item">
+            <div className="fly-list-item-icon"></div>
+            <div className="fly-list-item-descriptio"></div>
+          </div>
+          <div className="fly-list-item">
+            <div className="fly-list-item-icon"></div>
+            <div className="fly-list-item-descriptio"></div>
+          </div>
+          <div className="fly-list-item">
+            <div className="fly-list-item-icon"></div>
+            <div className="fly-list-item-descriptio"></div>
+          </div>
         </div>
       </div>
       <div className="fly-list-item-price"></div>
