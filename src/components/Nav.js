@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
-const Nav = () => {
+const Nav = ({ props }) => {
+  const history = useHistory();
   function myFunction() {
     var x = document.getElementById('myTopnav');
     if (x.className === 'topnav') {
@@ -10,9 +11,12 @@ const Nav = () => {
       x.className = 'topnav';
     }
   }
+  const redirect = () => {
+    history.push('/');
+  };
   return (
     <div className="topnav" id="myTopnav">
-      <Link to="/" className="active">
+      <Link onClick={redirect} className="active">
         Home
       </Link>
       <Link to="/about">About</Link>
