@@ -6,7 +6,7 @@ import './style.css';
 import PopUpFormSearch from './PopUpFormSearch';
 import { checkValidFromTo, getQuery } from '../utils/funtion-utilities';
 
-const FormSearch = ({ posiblePlaces, changeList, disableSearch }) => {
+const FormSearch = ({ posiblePlaces, disableSearch }) => {
   const [formData, setFormData] = useState(new Map());
   const [query, setQuery] = useState('');
 
@@ -14,11 +14,9 @@ const FormSearch = ({ posiblePlaces, changeList, disableSearch }) => {
     setFormData(formData.set(key, value));
     if (checkValidFromTo(formData.get('From'), formData.get('To'))) {
       document.getElementById('search-button').disabled = false;
-
       setQuery(getQuery(formData));
     } else {
       document.getElementById('search-button').disabled = true;
-      disableSearch(false);
     }
   };
   const enableSearch = () => {
@@ -34,16 +32,16 @@ const FormSearch = ({ posiblePlaces, changeList, disableSearch }) => {
         <PopUpFormSearch
           placeHolder={'From'}
           posiblePlaces={posiblePlaces}
-          changeList={changeList}
           setdataform={setData}
+          key={'Form'}
         />
       </div>
       <div className="item-search-form">
         <PopUpFormSearch
           placeHolder={'To'}
           posiblePlaces={posiblePlaces}
-          changeList={changeList}
           setdataform={setData}
+          key={'Fo'}
         />
       </div>
       <div className="item-search-form">

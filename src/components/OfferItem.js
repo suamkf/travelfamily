@@ -50,15 +50,12 @@ const OfferItem = ({ info, style_class, big_height, disableSearch }) => {
     separator_element.style.fontSize = '1rem';
   };
 
-  useEffect(() => {
-    disableSearch(true);
-  }, []);
-
   const sdfsdf =
     '<Linkto={`/searh/flyFrom=${info.fromData}&to=${info.toData}${`&dateFrom=${getCurrentDate()}&dateTo=${getCurrentDate()}`}${`&typeFlight=return&returnFrom=${getFutureDate(15)}&returnTo=${getFutureDate(15)}`}`}className={style_class}>';
   return (
     <>
       <Link
+        onClick={disableSearch(true)}
         to={`/searh/flyFrom=${info.fromData}&to=${
           info.toData
         }${`&dateFrom=${getCurrentDate()}&dateTo=${getCurrentDate()}`}${`&typeFlight=return&returnFrom=${getFutureDate(

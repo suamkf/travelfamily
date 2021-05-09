@@ -19,14 +19,6 @@ function App() {
     setEnableSearch(state);
   };
 
-  const getDataServerByPlace = async (place) => {
-    const res2 = await Axios(
-      `https://api.skypicker.com/locations?term=${place}&location_types=airport&sort=rank`
-    );
-
-    setPosiblePlaces(getListAiportByCity(res2.data.locations));
-  };
-
   const getUserData = async () => {
     try {
       const res1 = await Axios('https://ipapi.co/json/');
@@ -39,10 +31,6 @@ function App() {
     } catch (error) {}
   };
 
-  const changeList = async (place) => {
-    await getDataServerByPlace(place);
-  };
-
   useEffect(() => {
     getUserData();
   }, []);
@@ -51,11 +39,7 @@ function App() {
     <Router>
       <div className="Main">
         <Nav />
-        <Search
-          posiblePlaces={posiblePlaces}
-          changeList={changeList}
-          disableSearch={disableSearch}
-        />
+        <Search posiblePlaces={posiblePlaces} disableSearch={disableSearch} />
         <div className="index-info-container">
           <ChoosePath
             enableSearh={enableSearh}

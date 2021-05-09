@@ -1,24 +1,31 @@
 import React, { useState } from 'react';
+import Axios from 'axios';
 
-const PopUpFormSearch = ({
-  placeHolder,
-  posiblePlaces,
-  changeList,
-  setdataform,
-}) => {
+import { getListAiportByCity } from '../utils/funtion-utilities';
+import { isElementOfType } from 'react-dom/test-utils';
+const PopUpFormSearch = ({ placeHolder, setdataform }) => {
   const [place, setPlace] = useState('');
+  const [posiblePlaces, setPosiblePlaces] = useState([]);
+
+  const getDataServerByPlace = async () => {
+    const res2 = await Axios(
+      `https://api.skypicker.com/locations?term=${place}&location_types=airport&sort=rank`
+    );
+    const response = getListAiportByCity(res2.data.locations);
+
+    setPosiblePlaces(response);
+  };
 
   const setData = (e) => {
     e.preventDefault();
     setdataform(placeHolder, e.target.value);
     setPlace(e.target.value);
-    changeList(place);
+    getDataServerByPlace();
   };
 
   const setDataOnChange = (e) => {
     e.preventDefault();
     setPlace(e.target.value);
-    setdataform(placeHolder, place);
   };
 
   return (
@@ -30,12 +37,11 @@ const PopUpFormSearch = ({
         onChange={setData}
         value={place}
         placeholder={placeHolder}
-        key={placeHolder}
         onSelectCapture={setDataOnChange}
       />
 
       {posiblePlaces.length > 1 ? (
-        <datalist id="list-places" key={new Date()}>
+        <datalist id="list-places" key={placeHolder}>
           {posiblePlaces.map((element) => (
             <option
               key={element[2]}
