@@ -13,6 +13,11 @@ import { getListAiportByCity } from './utils/funtion-utilities';
 
 function App() {
   const [posiblePlaces, setPosiblePlaces] = useState([[]]);
+  const [enableSearh, setEnableSearch] = useState(false);
+
+  const disableSearch = (state) => {
+    setEnableSearch(state);
+  };
 
   const getDataServerByPlace = async (place) => {
     const res2 = await Axios(
@@ -21,6 +26,7 @@ function App() {
 
     setPosiblePlaces(getListAiportByCity(res2.data.locations));
   };
+
   const getUserData = async () => {
     try {
       const res1 = await Axios('https://ipapi.co/json/');
@@ -45,9 +51,17 @@ function App() {
     <Router>
       <div className="Main">
         <Nav />
-        <Search posiblePlaces={posiblePlaces} changeList={changeList} />
+        <Search
+          posiblePlaces={posiblePlaces}
+          changeList={changeList}
+          disableSearch={disableSearch}
+        />
         <div className="index-info-container">
-          <ChoosePath />
+          <ChoosePath
+            enableSearh={enableSearh}
+            posiblePlaces={posiblePlaces}
+            disableSearch={disableSearch}
+          />
         </div>
         <Footer />
       </div>
@@ -55,12 +69,25 @@ function App() {
   );
 }
 
-const ChoosePath = () => {
+const ChoosePath = ({ enableSearh, posiblePlaces, disableSearch }) => {
   return (
     <Switch>
-      <Route path="/searh/:query" render={(props) => <FlyList />} />
+      <Route
+        path="/searh/:query"
+        render={(props) => (
+          <FlyList key={Date.now()} enableSearh={enableSearh} />
+        )}
+      />
       <Route path="/about" render={(props) => <About />} />
-      <Route path="/" render={(props) => <IndexInfo />} />
+      <Route
+        path="/"
+        render={(props) => (
+          <IndexInfo
+            posiblePlaces={posiblePlaces}
+            disableSearch={disableSearch}
+          />
+        )}
+      />
     </Switch>
   );
 };

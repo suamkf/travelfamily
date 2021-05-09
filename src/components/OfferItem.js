@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import { detector } from '../utils/funtion-utilities';
+import {
+  detector,
+  getCurrentDate,
+  getFutureDate,
+} from '../utils/funtion-utilities';
 
-const OfferItem = ({ info, style_class, big_height }) => {
+const OfferItem = ({ info, style_class, big_height, disableSearch }) => {
   const shadeImage = () => {
     const element = document.getElementById(info.id);
     const descrition_element = document.getElementById(
@@ -18,7 +22,15 @@ const OfferItem = ({ info, style_class, big_height }) => {
       rgba(0, 0, 0, 0.5)
     ),url(${info ? info.image : ''})`;
       descrition_element.style.gridRow = 2;
-      descrition_element.innerHTML = ' <p >Salida --></p><p>Destino</p> ';
+      descrition_element.innerHTML = `<Link to={/searh/flyFrom=${
+        info.fromData
+      }&to=${
+        info.toData
+      }${`&dateFrom=${getCurrentDate()}&dateTo=${getCurrentDate()}`}${`&typeFlight=return&returnFrom=${getFutureDate(
+        15
+      )}&returnTo=${getFutureDate(15)}}`}><p>${info.cityFrom}</p><p>${
+        info.cityTo
+      }</p> </Link> `;
       separator_element.style.width = '90%';
     }
   };
@@ -33,12 +45,27 @@ const OfferItem = ({ info, style_class, big_height }) => {
     if (element && descrition_element && detector.mobile() === null)
       element.style.backgroundImage = `url(${info ? info.image : ''})`;
     descrition_element.style.gridRow = 10;
-    descrition_element.innerHTML = ' <p>Destino</p> ';
+    descrition_element.innerHTML = `<p>${info.cityTo}</p> `;
     separator_element.style.width = '60%';
+    separator_element.style.fontSize = '1rem';
   };
+
+  useEffect(() => {
+    disableSearch(true);
+  }, []);
+
+  const sdfsdf =
+    '<Linkto={`/searh/flyFrom=${info.fromData}&to=${info.toData}${`&dateFrom=${getCurrentDate()}&dateTo=${getCurrentDate()}`}${`&typeFlight=return&returnFrom=${getFutureDate(15)}&returnTo=${getFutureDate(15)}`}`}className={style_class}>';
   return (
-    <div className={style_class}>
-      <Link to={info.url}>
+    <>
+      <Link
+        to={`/searh/flyFrom=${info.fromData}&to=${
+          info.toData
+        }${`&dateFrom=${getCurrentDate()}&dateTo=${getCurrentDate()}`}${`&typeFlight=return&returnFrom=${getFutureDate(
+          15
+        )}&returnTo=${getFutureDate(15)}`}`}
+        className={style_class}
+      >
         <div
           id={info.id}
           className={`offer-item-image  ${big_height ? ' biggest-hight' : ''}`}
@@ -56,7 +83,7 @@ const OfferItem = ({ info, style_class, big_height }) => {
               className="offer-item-text-subcontainer"
               id={`description-${info.id}`}
             >
-              <p>Destino</p>
+              <p>{info.cityTo}</p>
             </div>
             <div
               className="offer-item-text-separaton"
@@ -65,7 +92,7 @@ const OfferItem = ({ info, style_class, big_height }) => {
           </div>
         </div>
       </Link>
-    </div>
+    </>
   );
 };
 

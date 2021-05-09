@@ -299,7 +299,8 @@ a:active {
   padding: 0px;
   margin: 0px auto;
   color: #ffffff;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
 }
 
 .offer-item-text-separaton {
@@ -360,19 +361,45 @@ a:active {
 }
 
 .fly-list-item-container {
-  width: 100%;
+  width: 95%;
   display: flex;
+  margin: 0px auto;
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 1.3rem;
-  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
-    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
-  border-radius: 0.2rem;
+  background-color: #ffffff;
+  border-radius: 0.4rem;
+  text-align: left;
+  border: 1px solid #04aa6d7c;
 }
 
+.fly-list-item-container p {
+  margin-left: 5px;
+  margin-top: 5px;
+  font-size: 0.7rem;
+  color: #000000a1;
+}
+
+@media screen and (min-width: 450px) {
+  .fly-list-item-container p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .fly-list-item-container p {
+    font-size: 1.2rem;
+  }
+}
 .fly-list-item-dep-des-container {
   width: 100%;
   height: 200px;
+}
+.fly-list-item-dep-des-container-middle-size {
+  height: 100px;
+}
+.middle-size {
+  height: 100px;
 }
 
 .fly-list-item-departure-destination {
@@ -388,12 +415,24 @@ a:active {
   width: 100%;
   height: 50px;
   border-top: 1px solid #04aa6dc0;
+  text-align: center;
+  display: table;
+}
+
+.fly-list-item-price p {
+  display: table-cell;
+  vertical-align: middle;
+  color: #04aa6d;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 @media screen and (min-width: 600px) {
   .fly-list-item-dep-des-container {
     width: 60%;
-    height: 200px;
+  }
+  .fly-list-item-dep-des-container-middle-size {
+    height: 75px;
   }
   .fly-list-item-departure-destination {
     height: 90px;
@@ -406,25 +445,41 @@ a:active {
     border-left: 1px solid #04aa6dc0;
     border-top: none;
   }
+
+  .fly-list-item-price-middle-size {
+    height: 100px;
+  }
 }
 @media screen and (min-width: 900px) {
   .fly-list-item-dep-des-container {
     width: 60%;
     height: 300px;
   }
+  .fly-list-item-dep-des-container-middle-size {
+    height: 150px;
+  }
   .fly-list-item-departure-destination {
     height: 140px;
     border-top: 1px solid #04aa6dc0;
     display: block;
   }
-
+  .fly-list-item-departure-destination-middle-size {
+    height: 150px;
+  }
   .fly-list-item-price {
     width: 39%;
     height: 300px;
     border-left: 1px solid #04aa6dc0;
   }
+
+  .fly-list-item-price-middle-size {
+    height: 150px;
+  }
 }
 
+.hidde-container {
+  display: none;
+}
 .none-top-border {
   border-top: none;
 }
@@ -432,7 +487,6 @@ a:active {
 .fly-list-item {
   width: 100%;
   height: 33%;
-  background-color: red;
   margin-top: 3px;
   display: flex;
   justify-content: space-between;
@@ -449,13 +503,29 @@ a:active {
 .fly-list-item-icon {
   width: 15%;
   height: 100%;
-  background-color: black;
+  margin: 0px auto;
+}
+.fly-list-item-icon img {
+  width: 85%;
+  height: 80%;
+  padding: 0px;
+  background-size: 100% 100%;
 }
 
+@media screen and(min-width:700px) {
+  .fly-list-item-icon img {
+    height: 100%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .fly-list-item-icon img {
+    width: 38px;
+    margin-left: 10px;
+  }
+}
 .fly-list-item-descriptio {
   width: 84%;
   height: 100%;
-  background-color: black;
 }
 
 @media screen and (min-width: 350px) {
@@ -543,8 +613,8 @@ a:active {
   height: auto;
   margin-top: 0.6rem;
   background-color: #ffffff;
-  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
-    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 -1em 1em rgba(21, 119, 2, 0.1),
+    0 0 0 2px rgb(255, 255, 255), 0.1em 0.1em 1em rgba(21, 119, 2, 0.1);
   text-align: left;
 }
 
@@ -588,4 +658,9 @@ a:active {
 
 .about-body-card-item-description {
   width: 100%;
+}
+
+.loading {
+  margin: 0px auto;
+  margin-top: 2rem;
 }

@@ -4,19 +4,26 @@ import TextField from '@material-ui/core/TextField';
 
 import './style.css';
 import PopUpFormSearch from './PopUpFormSearch';
-import { checkValidFromTo } from '../utils/funtion-utilities';
+import { checkValidFromTo, getQuery } from '../utils/funtion-utilities';
 
-const FormSearch = ({ posiblePlaces, changeList }) => {
+const FormSearch = ({ posiblePlaces, changeList, disableSearch }) => {
   const [formData, setFormData] = useState(new Map());
+  const [query, setQuery] = useState('');
 
   const setData = (key, value) => {
     setFormData(formData.set(key, value));
-    document.getElementById('search-button').disabled = !checkValidFromTo(
-      formData.get('From'),
-      formData.get('To')
-    );
-  };
+    if (checkValidFromTo(formData.get('From'), formData.get('To'))) {
+      document.getElementById('search-button').disabled = false;
 
+      setQuery(getQuery(formData));
+    } else {
+      document.getElementById('search-button').disabled = true;
+      disableSearch(false);
+    }
+  };
+  const enableSearch = () => {
+    disableSearch(true);
+  };
   const getDate = (e) => {
     e.preventDefault();
     setData(e.target.id, e.target.value);
@@ -70,7 +77,7 @@ const FormSearch = ({ posiblePlaces, changeList }) => {
         </form>
       </div>
       <div className="search-button-form">
-        <Link to="/searh/:query">
+        <Link onClick={enableSearch} to={`/searh/${query}`}>
           <button className="search-button" disabled id="search-button">
             Buscar
           </button>
