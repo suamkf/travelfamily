@@ -11,15 +11,18 @@ const Nav = ({ props }) => {
       x.className = 'topnav';
     }
   }
-  const redirect = () => {
+  const redirectHome = () => {
     history.push('/');
+  };
+  const redirectAbut = () => {
+    history.push('/about');
   };
   return (
     <div className="topnav" id="myTopnav">
-      <Link onClick={redirect} className="active">
+      <Link onClick={redirectHome} className="active">
         Home
       </Link>
-      <Link to="/about">About</Link>
+      <Link onClick={redirectAbut}>About</Link>
       <Link className="icon" onClick={myFunction}>
         <i className="fa fa-bars"></i>
       </Link>
