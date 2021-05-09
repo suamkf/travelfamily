@@ -76,12 +76,12 @@ const IndexInfo = ({ posiblePlaces, disableSearch, getUserData }) => {
           BEST EXPERIENCE AND PRICE
         </p>
         <p className="index-info-description-subtitle">
-          Ower obsetion is give the best family travel experince with the best
+          Our goal is to provide the best family travel experience at the best
           price.
         </p>
         <b>
           <p className="index-info-description-subtitle">
-            Please check ower offerts
+            Please check our offers
           </p>
         </b>
       </div>

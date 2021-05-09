@@ -8,7 +8,7 @@ const About = () => {
           <p>About us</p>
         </div>
         <div className="about-header-description">
-          <p>Title header description</p>
+          <p>Family travel team members</p>
         </div>
       </div>
       <div className="about-body">
@@ -33,7 +33,7 @@ const About = () => {
             name={'Yamila'}
             charge={'COO & Founder'}
             description={
-              'Coordination of tasks in the short and medium term. As a secondary task is teaching our CEO to walk..'
+              'Coordination of tasks in the short and medium term. As a secondary task is teaching our CEO to walk.'
             }
           />
           <TeamCar
@@ -43,7 +43,7 @@ const About = () => {
             name={'Pablo'}
             charge={'CTO & Founder'}
             description={
-              'Principal team member developer and also princiapl assistent with baths and diaper changes to our CEO.'
+              'Principal team developer and also principal assistant with baths and diaper changes to our CEO.'
             }
           />
         </div>
