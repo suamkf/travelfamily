@@ -28,14 +28,14 @@ const FlyListItem = ({ destination }) => {
             </div>
             <div className="fly-list-item-descriptio">
               <p>{`${destination.get('from').from} - ${
-                destination.get('from').dTime
+                destination.get('from').to
               }`}</p>
             </div>
           </div>
           <div className="fly-list-item">
             <div className="fly-list-item-icon">
               <img
-                src="https://images.vexels.com/media/users/3/128926/isolated/preview/c60c97eba10a56280114b19063d04655-icono-redondo-del-aeropuerto-de-avi-oacute-n-by-vexels.png"
+                src="https://static.vecteezy.com/system/resources/previews/000/633/173/non_2x/clock-icon-symbol-sign-vector.jpg"
                 alt="scale"
               />
             </div>
@@ -50,12 +50,12 @@ const FlyListItem = ({ destination }) => {
           <div className="fly-list-item">
             <div className="fly-list-item-icon">
               <img
-                src="https://image.freepik.com/iconos-gratis/avion-volando_318-1385.jpg"
+                src="https://as2.ftcdn.net/jpg/02/29/85/83/500_F_229858326_kfebVS5aUKkk12v1aEEaDE69rTc2AMEk.jpg"
                 alt="scale"
               />
             </div>
             <div className="fly-list-item-descriptio">
-              <p>{`${destination.get('from').to} - ${
+              <p>{`Dep: ${destination.get('from').dTime} - Arr: ${
                 destination.get('from').aTime
               }`}</p>
             </div>
@@ -100,7 +100,7 @@ const FlyListItem = ({ destination }) => {
               <div className="fly-list-item">
                 <div className="fly-list-item-icon">
                   <img
-                    src="https://image.freepik.com/iconos-gratis/avion-volando_318-1385.jpg"
+                    src="https://as2.ftcdn.net/jpg/02/29/85/83/500_F_229858326_kfebVS5aUKkk12v1aEEaDE69rTc2AMEk.jpg"
                     alt="scale"
                   />
                 </div>

@@ -379,11 +379,11 @@ a:active {
 .fly-list-item-container p {
   margin-left: 5px;
   margin-top: 5px;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   color: #000000a1;
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 500px) {
   .fly-list-item-container p {
     font-size: 0.9rem;
   }
@@ -391,7 +391,7 @@ a:active {
 
 @media screen and (min-width: 900px) {
   .fly-list-item-container p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 .fly-list-item-dep-des-container {
@@ -435,28 +435,28 @@ a:active {
     width: 60%;
   }
   .fly-list-item-dep-des-container-middle-size {
-    height: 75px;
+    height: 130px;
   }
   .fly-list-item-departure-destination {
-    height: 90px;
+    height: 110px;
     border-top: 1px solid #04aa6dc0;
   }
 
   .fly-list-item-price {
     width: 39%;
-    height: 200px;
+    height: 240px;
     border-left: 1px solid #04aa6dc0;
     border-top: none;
   }
 
   .fly-list-item-price-middle-size {
-    height: 100px;
+    height: 130px;
   }
 }
 @media screen and (min-width: 900px) {
   .fly-list-item-dep-des-container {
     width: 60%;
-    height: 300px;
+    height: 330px;
   }
   .fly-list-item-dep-des-container-middle-size {
     height: 150px;
@@ -471,7 +471,7 @@ a:active {
   }
   .fly-list-item-price {
     width: 39%;
-    height: 300px;
+    height: 330px;
     border-left: 1px solid #04aa6dc0;
   }
 
