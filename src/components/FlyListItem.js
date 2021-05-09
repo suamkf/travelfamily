@@ -27,9 +27,11 @@ const FlyListItem = ({ destination }) => {
               />
             </div>
             <div className="fly-list-item-descriptio">
-              <p>{`${destination.get('from').from} - ${
-                destination.get('from').to
-              }`}</p>
+              <p>{`${destination.get('from').from} (${
+                destination.get('from').flyFrom
+              }) - ${destination.get('from').to} (${
+                destination.get('from').flyTo
+              })`}</p>
             </div>
           </div>
           <div className="fly-list-item">
@@ -40,10 +42,10 @@ const FlyListItem = ({ destination }) => {
               />
             </div>
             <div className="fly-list-item-descriptio">
-              <p>{`Duration ${destination.get('from').duration} - Scales: ${
+              <p>{`Duration ${destination.get('from').duration} - ${
                 destination.get('from').scales > 0
-                  ? destination.get('from').scales
-                  : 'none'
+                  ? ` Stopover: ${destination.get('from').scales}`
+                  : 'Direct'
               }`}</p>
             </div>
           </div>
@@ -77,23 +79,25 @@ const FlyListItem = ({ destination }) => {
                   />
                 </div>
                 <div className="fly-list-item-descriptio">
-                  <p>{`${destination.get('to').from} - ${
-                    destination.get('to').dTime
-                  }`}</p>
+                  <p>{`${destination.get('to').from} (${
+                    destination.get('to').flyFrom
+                  }) - ${destination.get('to').to} (${
+                    destination.get('to').flyTo
+                  })`}</p>
                 </div>
               </div>
               <div className="fly-list-item">
                 <div className="fly-list-item-icon">
                   <img
-                    src="https://images.vexels.com/media/users/3/128926/isolated/preview/c60c97eba10a56280114b19063d04655-icono-redondo-del-aeropuerto-de-avi-oacute-n-by-vexels.png"
+                    src="https://static.vecteezy.com/system/resources/previews/000/633/173/non_2x/clock-icon-symbol-sign-vector.jpg"
                     alt="scale"
                   />
                 </div>
                 <div className="fly-list-item-descriptio">
-                  <p>{`Duration ${destination.get('to').duration} - Scales: ${
+                  <p>{`Duration ${destination.get('to').duration} - ${
                     destination.get('to').scales > 0
-                      ? destination.get('to').scales
-                      : 'none'
+                      ? ` Stopover: ${destination.get('to').scales}`
+                      : 'Direct'
                   }`}</p>
                 </div>
               </div>
@@ -105,7 +109,7 @@ const FlyListItem = ({ destination }) => {
                   />
                 </div>
                 <div className="fly-list-item-descriptio">
-                  <p>{`${destination.get('to').to} - ${
+                  <p>{`Dep: ${destination.get('to').dTime} - Arr: ${
                     destination.get('to').aTime
                   }`}</p>
                 </div>

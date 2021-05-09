@@ -107,11 +107,11 @@ const calculateScales = (departure, destination, routes) => {
   for (index; index < routes.length; index++) {
     if (routes[index].flyFrom === departure) break;
   }
-  for (final; final < routes.length; final++) {
+  for (final; final < routes.length - 1; final++) {
     if (routes[final].flyTo === destination) break;
   }
 
-  return final - index - 1;
+  return final - index;
 };
 const getRouteData = (data, widthReturn) => {
   const routeMap = new Map();
@@ -122,11 +122,13 @@ const getRouteData = (data, widthReturn) => {
       const to = route.find((element2) => element2.flyTo === element[1]);
       routeMap.set('from', {
         from: from.cityFrom,
+        flyFrom: from.flyFrom,
+        flyTo: to.flyTo,
         to: to.cityTo,
-        dTime: getDateFromOpoch(from.dTime),
-        aTime: getDateFromOpoch(to.aTime),
+        dTime: getDateFromOpoch(from.dTimeUTC),
+        aTime: getDateFromOpoch(to.aTimeUTC),
         duration: milisToTime(
-          convertEpochToMilis(to.aTime) - convertEpochToMilis(from.dTime)
+          convertEpochToMilis(to.aTimeUTC) - convertEpochToMilis(from.dTimeUTC)
         ),
         totalPrice: data.price,
         scales: calculateScales(element[0], element[1], data.route),
@@ -137,13 +139,15 @@ const getRouteData = (data, widthReturn) => {
       routeMap.set('to', {
         from: from.cityFrom,
         to: to.cityTo,
-        dTime: getDateFromOpoch(from.dTime),
-        aTime: getDateFromOpoch(to.aTime),
+        flyFrom: from.flyFrom,
+        flyTo: to.flyTo,
+        dTime: getDateFromOpoch(from.dTimeUTC),
+        aTime: getDateFromOpoch(to.aTimeUTC),
         duration: milisToTime(
-          convertEpochToMilis(to.aTime) - convertEpochToMilis(from.dTime)
+          convertEpochToMilis(to.aTimeUTC) - convertEpochToMilis(from.dTimeUTC)
         ),
         totalPrice: data.price,
-        scales: calculateScales(element[1], element[0], data.route),
+        scales: calculateScales(element[0], element[1], data.route),
       });
     }
   });
