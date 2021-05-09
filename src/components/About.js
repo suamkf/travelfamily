@@ -17,22 +17,34 @@ const About = () => {
         </div>
         <div className="about-body-cards">
           <TeamCar
-            image={'https://www.w3schools.com/w3images/team1.jpg'}
-            name={'Joe Brand'}
+            image={
+              'https://i.ibb.co/dMWdkm1/Whats-App-Image-2021-05-09-at-4-33-09-PM.jpg'
+            }
+            name={'Emanuel'}
             charge={'CEO & Founder'}
-            description={'Some text that describes me lorem ipsum ipsum lorem.'}
+            description={
+              'In charge of coordinating the times and tasks of the team, such as playing, eating or sleeping.'
+            }
           />
           <TeamCar
-            image={'https://www.w3schools.com/w3images/team1.jpg'}
-            name={'Joe Brand'}
-            charge={'CEO & Founder'}
-            description={'Some text that describes me lorem ipsum ipsum lorem.'}
+            image={
+              'https://i.ibb.co/djrmyLX/Whats-App-Image-2021-05-09-at-4-33-08-PM-1.jpg'
+            }
+            name={'Yamila'}
+            charge={'COO & Founder'}
+            description={
+              'Coordination of tasks in the short and medium term. As a secondary task is teaching our CEO to walk..'
+            }
           />
           <TeamCar
-            image={'https://www.w3schools.com/w3images/team1.jpg'}
-            name={'Joe Brand'}
-            charge={'CEO & Founder'}
-            description={'Some text that describes me lorem ipsum ipsum lorem.'}
+            image={
+              'https://i.ibb.co/gvHb3r6/Whats-App-Image-2021-05-09-at-4-33-08-PM.jpg'
+            }
+            name={'Pablo'}
+            charge={'CTO & Founder'}
+            description={
+              'Principal team member developer and also princiapl assistent with baths and diaper changes to our CEO.'
+            }
           />
         </div>
       </div>
