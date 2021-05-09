@@ -61,6 +61,7 @@ function App() {
             enableSearh={enableSearh}
             posiblePlaces={posiblePlaces}
             disableSearch={disableSearch}
+            getUserData={getUserData}
           />
         </div>
         <Footer />
@@ -69,7 +70,12 @@ function App() {
   );
 }
 
-const ChoosePath = ({ enableSearh, posiblePlaces, disableSearch }) => {
+const ChoosePath = ({
+  enableSearh,
+  posiblePlaces,
+  disableSearch,
+  getUserData,
+}) => {
   return (
     <Switch>
       <Route
@@ -85,6 +91,7 @@ const ChoosePath = ({ enableSearh, posiblePlaces, disableSearch }) => {
           <IndexInfo
             posiblePlaces={posiblePlaces}
             disableSearch={disableSearch}
+            getUserData={getUserData}
           />
         )}
       />

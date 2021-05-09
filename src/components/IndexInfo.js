@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import OfferItem from './OfferItem';
 
-const IndexInfo = ({ posiblePlaces, disableSearch }) => {
+const IndexInfo = ({ posiblePlaces, disableSearch, getUserData }) => {
   const info = [
     {
       id: 1,
@@ -64,6 +64,9 @@ const IndexInfo = ({ posiblePlaces, disableSearch }) => {
         'https://www.phdmedia.com/puerto-rico/wp-content/uploads/sites/99/2016/02/PuertoRico1.jpg',
     },
   ];
+  useEffect(() => {
+    getUserData();
+  }, []);
 
   return (
     <>

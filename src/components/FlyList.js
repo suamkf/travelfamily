@@ -33,7 +33,7 @@ const FlyList = ({ enableSearh }) => {
   }, []);
   return (
     <div className="fly-list-container">
-      {loading ? (
+      {loading && enableSearh ? (
         <Loading color="#04aa6de0" />
       ) : (
         destinations.map((destination) => (
