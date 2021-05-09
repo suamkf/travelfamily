@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 
 import OfferItem from './OfferItem';
+import { v4 as uuidv4 } from 'uuid';
 
 const IndexInfo = ({ posiblePlaces, disableSearch, getUserData }) => {
   const info = [
@@ -89,33 +90,39 @@ const IndexInfo = ({ posiblePlaces, disableSearch, getUserData }) => {
           info={info[0]}
           style_class={'offer-item-container offer-item-container2'}
           disableSearch={disableSearch}
+          key={uuidv4()}
         />
         <OfferItem
           info={info[1]}
           style_class={'offer-item-container offer-item-container2'}
           disableSearch={disableSearch}
+          key={uuidv4()}
         />
         <OfferItem
           info={info[2]}
           style_class={'offer-item-container offer-item-container2'}
           disableSearch={disableSearch}
+          key={uuidv4()}
         />
         <OfferItem
           info={info[3]}
           style_class={'offer-item-container offer-item-container2'}
           disableSearch={disableSearch}
+          key={uuidv4()}
         />
         <OfferItem
           info={info[4]}
           style_class={'offer-item-container'}
           disableSearch={disableSearch}
           big_height={true}
+          key={uuidv4()}
         />
         <OfferItem
           info={info[5]}
           style_class={'offer-item-container'}
           disableSearch={disableSearch}
           big_height={true}
+          key={uuidv4()}
         />
       </div>
     </>

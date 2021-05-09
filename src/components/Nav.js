@@ -19,11 +19,11 @@ const Nav = ({ props }) => {
   };
   return (
     <div className="topnav" id="myTopnav">
-      <Link onClick={redirectHome} className="active">
+      <Link to="/" className="active">
         Home
       </Link>
-      <Link onClick={redirectAbut}>About</Link>
-      <Link className="icon" onClick={myFunction}>
+      <Link to="/about">About</Link>
+      <Link to="" className="icon" onClick={myFunction}>
         <i className="fa fa-bars"></i>
       </Link>
     </div>

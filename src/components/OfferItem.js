@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 import {
@@ -8,6 +8,9 @@ import {
 } from '../utils/funtion-utilities';
 
 const OfferItem = ({ info, style_class, big_height, disableSearch }) => {
+  const enableSearch = () => {
+    disableSearch(true);
+  };
   const shadeImage = () => {
     const element = document.getElementById(info.id);
     const descrition_element = document.getElementById(
@@ -50,12 +53,10 @@ const OfferItem = ({ info, style_class, big_height, disableSearch }) => {
     separator_element.style.fontSize = '1rem';
   };
 
-  const sdfsdf =
-    '<Linkto={`/searh/flyFrom=${info.fromData}&to=${info.toData}${`&dateFrom=${getCurrentDate()}&dateTo=${getCurrentDate()}`}${`&typeFlight=return&returnFrom=${getFutureDate(15)}&returnTo=${getFutureDate(15)}`}`}className={style_class}>';
   return (
     <>
       <Link
-        onClick={disableSearch(true)}
+        onClick={enableSearch}
         to={`/searh/flyFrom=${info.fromData}&to=${
           info.toData
         }${`&dateFrom=${getCurrentDate()}&dateTo=${getCurrentDate()}`}${`&typeFlight=return&returnFrom=${getFutureDate(

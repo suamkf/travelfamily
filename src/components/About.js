@@ -44,7 +44,7 @@ const TeamCar = ({ image, name, charge, description }) => {
   return (
     <div className="about-body-card-item">
       <div className="about-body-card-item-image">
-        <img src={image} />
+        <img src={image} alt="team" />
       </div>
       <div className="about-body-card-item-title">
         <p>{name}</p>
