@@ -5,7 +5,6 @@ import { v4 as uuidv4 } from 'uuid';
 
 import './style.css';
 import PopUpFormSearch from './PopUpFormSearch';
-import PopUpFormSearch2 from './PopUpFormSearch copy';
 import { checkValidFromTo, getQuery } from '../utils/funtion-utilities';
 
 const FormSearch = ({ posiblePlaces, disableSearch }) => {
