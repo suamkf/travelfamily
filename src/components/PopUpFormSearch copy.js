@@ -33,7 +33,7 @@ const PopUpFormSearch = ({ placeHolder, setdataform }) => {
     <>
       <input
         type="search"
-        list={`list-places-${placeHolder}`}
+        list="list-places"
         className="input-search-form-input-place"
         onChange={setData}
         value={place}
@@ -43,7 +43,7 @@ const PopUpFormSearch = ({ placeHolder, setdataform }) => {
       />
 
       {posiblePlaces.length > 1 ? (
-        <datalist id={`list-places-${placeHolder}`} key={uuidv4()}>
+        <datalist id="list-places" key={uuidv4()}>
           {posiblePlaces.map((element) => (
             <option
               value={`${element[0]}-${element[1]}-${element[2]}`}

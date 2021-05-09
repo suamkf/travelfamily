@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import TextField from '@material-ui/core/TextField';
+import { v4 as uuidv4 } from 'uuid';
 
 import './style.css';
 import PopUpFormSearch from './PopUpFormSearch';
+import PopUpFormSearch2 from './PopUpFormSearch copy';
 import { checkValidFromTo, getQuery } from '../utils/funtion-utilities';
 
 const FormSearch = ({ posiblePlaces, disableSearch }) => {
@@ -33,7 +35,7 @@ const FormSearch = ({ posiblePlaces, disableSearch }) => {
           placeHolder={'From'}
           posiblePlaces={posiblePlaces}
           setdataform={setData}
-          key={'Form'}
+          key={'123'}
         />
       </div>
       <div className="item-search-form">
@@ -41,7 +43,7 @@ const FormSearch = ({ posiblePlaces, disableSearch }) => {
           placeHolder={'To'}
           posiblePlaces={posiblePlaces}
           setdataform={setData}
-          key={'Fo'}
+          key={'456'}
         />
       </div>
       <div className="item-search-form">
