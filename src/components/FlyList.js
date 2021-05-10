@@ -12,6 +12,8 @@ const FlyList = ({ enableSearh }) => {
   const [loading, setLoading] = useState(true);
   const { query } = useParams();
 
+  /*here according to the place of departure and destination
+   selected, as well as the dates, we look for possible trips*/
   const requestDestinations = async () => {
     if (enableSearh) {
       setLoading(true);
@@ -23,6 +25,7 @@ const FlyList = ({ enableSearh }) => {
         )
       );
 
+      /*once the answer is obtained we convert it to array*/
       setDestinations(getArrayRoutes(data, query));
       setLoading(false);
     }
@@ -33,6 +36,8 @@ const FlyList = ({ enableSearh }) => {
   }, []);
   return (
     <div className="fly-list-container">
+      {/* If the search is waiting, the load component is displayed, otherwise the results are mapped.
+      FlyListItem has the logic to correctly render results that are roundtrip or one-way*/}
       {loading && enableSearh ? (
         <Loading color="#04aa6de0" />
       ) : (

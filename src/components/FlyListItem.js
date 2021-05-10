@@ -1,8 +1,8 @@
 import React from 'react';
 
 const FlyListItem = ({ destination }) => {
-  console.log();
-
+  /*depending on the search result (round trip or one-way trip) 
+  the appropriate components are displayed*/
   return (
     <div className="fly-list-item-container">
       <div

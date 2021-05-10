@@ -8,6 +8,8 @@ const PopUpFormSearch = ({ placeHolder, setdataform }) => {
   const [place, setPlace] = useState('');
   const [posiblePlaces, setPosiblePlaces] = useState([]);
 
+  /*depending on the value captured in the input text we
+   search (in real time) for the matching results*/
   const getDataServerByPlace = async () => {
     const res2 = await Axios(
       `https://api.skypicker.com/locations?term=${place}&location_types=airport&sort=rank`

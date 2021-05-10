@@ -11,6 +11,7 @@ const OfferItem = ({ info, style_class, big_height, disableSearch }) => {
   const enableSearch = () => {
     disableSearch(true);
   };
+  /*the image is shaded when user move the mouse hover the image */
   const shadeImage = () => {
     const element = document.getElementById(info.id);
     const descrition_element = document.getElementById(
@@ -37,6 +38,7 @@ const OfferItem = ({ info, style_class, big_height, disableSearch }) => {
       separator_element.style.width = '90%';
     }
   };
+  /*the image is unshaded when user move out the mouse hover the image */
   const unShadeImage = () => {
     const element = document.getElementById(info.id);
     const descrition_element = document.getElementById(
@@ -55,6 +57,7 @@ const OfferItem = ({ info, style_class, big_height, disableSearch }) => {
 
   return (
     <>
+      {/*the link with the query is created */}
       <Link
         onClick={enableSearch}
         to={`/searh/flyFrom=${info.fromData}&to=${

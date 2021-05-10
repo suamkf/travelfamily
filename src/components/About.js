@@ -1,6 +1,7 @@
 import React from 'react';
 
 const About = () => {
+  /*simple footer component*/
   return (
     <div className="about-container">
       <div className="about-header">

@@ -4,7 +4,6 @@ import FormSearch from './FormSearch';
 
 const Search = ({ posiblePlaces, disableSearch }) => {
   return (
-    /* Background Image */
     <div className="search-bg-img">
       <div className="search-container">
         <div className="search-info">
@@ -15,6 +14,7 @@ const Search = ({ posiblePlaces, disableSearch }) => {
           </p>
         </div>
         <div className="search-form">
+          {/* Search form contain creation of input fields and logic to capture their info*/}
           <FormSearch
             posiblePlaces={posiblePlaces}
             disableSearch={disableSearch}

@@ -3,6 +3,9 @@ import React, { useEffect } from 'react';
 import OfferItem from './OfferItem';
 import { v4 as uuidv4 } from 'uuid';
 
+/*This component have the logic to create OfferItems components 
+that when clicking them depending on the location of the user shows
+ the routes to the destination offered*/
 const IndexInfo = ({ posiblePlaces, disableSearch, getUserData }) => {
   const info = [
     {
@@ -86,6 +89,8 @@ const IndexInfo = ({ posiblePlaces, disableSearch, getUserData }) => {
         </b>
       </div>
       <div className="index-info-offer">
+        {/*OfferItem has the logic to create the query and redirect
+         the call to ListItem and show the possible trips */}
         <OfferItem
           info={info[0]}
           style_class={'offer-item-container offer-item-container2'}

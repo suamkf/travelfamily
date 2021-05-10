@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
+/* We create a responsive nav bar */
 const Nav = ({ props }) => {
-  const history = useHistory();
-  function myFunction() {
+  function actionMenu() {
     var x = document.getElementById('myTopnav');
     if (x.className === 'topnav') {
       x.className += ' responsive';
@@ -11,19 +11,13 @@ const Nav = ({ props }) => {
       x.className = 'topnav';
     }
   }
-  const redirectHome = () => {
-    history.push('/');
-  };
-  const redirectAbut = () => {
-    history.push('/about');
-  };
   return (
     <div className="topnav" id="myTopnav">
       <Link to="/" className="active">
         Home
       </Link>
       <Link to="/about">About</Link>
-      <Link to="" className="icon" onClick={myFunction}>
+      <Link to="" className="icon" onClick={actionMenu}>
         <i className="fa fa-bars"></i>
       </Link>
     </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactLoading from 'react-loading';
 
+/*loading component*/
 const Loading = ({ type, color }) => (
   <ReactLoading
     className="loading"
