@@ -24,3 +24,4 @@ You will also see any lint errors in the console.
 - Return optional date: if the user select fly from and to but not a return time, the system take the current date +
   15 days.
 - The system shows for one-way o round trip: fly from and to, departure time and arrival time, fly duration, stopovers and total price.
+- In case of not found trip show friendly alert component.

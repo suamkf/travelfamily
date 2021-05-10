@@ -6,6 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 import FlyListItem from './FlyListItem';
 import { getArrayRoutes, formatLink } from '../utils/funtion-utilities';
 import Loading from './Loading';
+import NotTripFound from './NotTripFound';
 
 const FlyList = ({ enableSearh }) => {
   const [destinations, setDestinations] = useState([]);
@@ -34,16 +35,19 @@ const FlyList = ({ enableSearh }) => {
   useEffect(() => {
     requestDestinations();
   }, []);
+  console.log(destinations.length);
   return (
     <div className="fly-list-container">
       {/* If the search is waiting, the load component is displayed, otherwise the results are mapped.
       FlyListItem has the logic to correctly render results that are roundtrip or one-way*/}
       {loading && enableSearh ? (
         <Loading color="#04aa6de0" />
-      ) : (
+      ) : destinations.length > 0 ? (
         destinations.map((destination) => (
           <FlyListItem key={uuidv4()} destination={destination} />
         ))
+      ) : (
+        <NotTripFound />
       )}
     </div>
   );
